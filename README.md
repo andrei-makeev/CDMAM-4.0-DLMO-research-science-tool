@@ -9,3 +9,7 @@ To run the ROI extraction script in manual mode (with CDMAM 4.0 grid extreme ver
 ```bash
 python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m (x<sub>A</sub>, y<sub>A</sub>, x<sub>B</sub>, y<sub>B</sub>, x<sub>C</sub>, y<sub>C</sub>, x<sub>D</sub>, y<sub>D</sub>)
 
+Einstein's equation: E = mc<sup>2</sup>  
+Water formula: H<sub>2</sub>O
+
+
