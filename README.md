@@ -7,5 +7,5 @@ A series of DICOM DBT reconstruction volumes of the (CDMAM 4.0 + BR3D "swirl" ba
 To run the script, use the following command in your terminal:
 
 ```bash
-python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m (x_A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)
+python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m (x+208A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)
 
