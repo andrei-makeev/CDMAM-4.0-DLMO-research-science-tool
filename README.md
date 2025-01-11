@@ -4,8 +4,8 @@ The purpose of this test is to use a pre-trained, fixed deep learning model, as 
 A series of DICOM DBT reconstruction volumes of the (CDMAM 4.0 + BR3D "swirl" background + PMMA) phantom assembly are used as an input to produce PC score and its standard error of the mean as a measure of system performance (image quality). There are three steps involved: 1) data acucquisition (described in detail in [data collection manual PDF](https://plaque.twinbrook.org/index.php/s/AZYWP2z9SBYyexd), 2) ROI extraction (automated or manual), and 3) running cross-validation for image quality perfomance assessment.
 ## How to Execute the Script
 
-To run the script, use the following command in your terminal:
+To run the ROI extraction script in manual mode (with CDMAM 4.0 grid extreme vertices (x,y)-coordinates supplied by the user), use the following command in your terminal:
 
 ```bash
-python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m (x+208A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)
+python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m (x<sub>A</sub>, y<sub>A</sub>, x<sub>B</sub>, y<sub>B</sub>, x<sub>C</sub>, y<sub>C</sub>, x<sub>D</sub>, y<sub>D</sub>)
 
