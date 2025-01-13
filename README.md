@@ -7,7 +7,7 @@ ROI extraction
 To run the ROI extraction script in <u>manual</u> mode (with CDMAM 4.0 grid extreme vertices (x,y)-coordinates supplied by the user), use the following command in your terminal:
 
 ```bash
-python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m "($x_{A}$, y, x, y, x, y, x, y)"
+python3 read_cdmam_blobs.py -ctr_slc 24 <path_to_dicom_files> -m "(x<sub>A</sub>, y, x, y, x, y, x, y)"
 
 
 
