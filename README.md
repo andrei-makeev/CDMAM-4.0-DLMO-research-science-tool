@@ -47,8 +47,10 @@ This data can be visualized by using:
 python3 plot_pc_vs_nroi.py -f <cv_results_file.txt>
 ```
 Device performance (4-AFC PC scores along with SEM) will be
-summarized as shown in the graph below. For regulatory submissions
-we ask to conduct three such tests with three thicknesses of added
-PMMA (20, 40 and 50 mm) for both predicate and subject devices.
+summarized as shown in the graph below. ![Alt Text](images/dlmo_pc_all_layers_trainable.png)
+
+For regulatory submissions we ask to conduct three such tests with
+three thicknesses of added PMMA (20, 40 and 50 mm) for both predicate
+and subject devices.
 
 
