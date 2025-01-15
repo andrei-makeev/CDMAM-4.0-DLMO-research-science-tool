@@ -49,7 +49,8 @@ python3 plot_pc_vs_nroi.py -f <cv_results_file.txt> -o <output_png_filename>
 ```
 DBT device performance (4-AFC PC scores with SEM error bars) will
 be summarized as shown in the graph below.
-<img src="images/results_plot.png" alt="Alt Text" style="width:75%;">
+<img src="images/results_plot.png" alt="Alt Text" style="width:70%;">
+
 For regulatory submissions we ask the companies to conduct three such
 tests with varied thicknesses of added PMMA (20, 40 and 50 mm) for both
 predicate and subject devices.
