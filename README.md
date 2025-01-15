@@ -13,7 +13,7 @@ python3 extract_cdmam_rois.py -ctr_slc 24 <path_to_dicom_files> -a
 ```
 We recommend to always visually inspect extracted ROI crops in ImageJ by loading all `roi_*.png` files into ImageJ `File -> ImageSequence` stack before proceeding with cross-validation. Good quality patches may have some CDMAM 4.0 cell-separating lines visible at the squares borders, but no more than a few (2-4) pixels deep into an ROI. No symbols or characters in the CDMAM should be present in the ROIs. Square ROIs have two zero-valued lines drawn by the software to separate them into four qudrants. The central CDMAM detail (signal) should be approximately at the intersection of these lines, while the eccentrtic detail should be in one of the four quadrants. Note that due to presence of the non-uniform background some lower contrast details may be hard to see.
 
-# Cross validation with new data
+# Fine-tuning and cross validation with new data
 Imaging performance evaluation is done by performing 10-fold cross-validation runs on a new data. To start cross-validation script use:
 ```bash
 python3 run_cv.py -m <baseline_model> -d <test_dataset_path>
@@ -42,7 +42,7 @@ CV using 408 ROIs
 0.805 0.756 0.829 0.780 0.829 0.829 0.707 0.780 0.900 0.875
 0.780 0.805 0.854 0.756 0.780 0.780 0.780 0.756 0.775 0.900
 ```
-# Creating PC vs. N_ROI graph for performance report
+# Creating PC vs. N_ROI graph for summary performance report
 The output data above can be visualized and saved on disk by executing:
 ```bash
 python3 plot_pc_vs_nroi.py -f <cv_results_file.txt> -o <output_png_filename>
