@@ -6,7 +6,7 @@ Assuming that imaging  data has been collected (18 DBT scans of the CDMAM assemb
 ```bash
 python3 extract_cdmam_rois.py -ctr_slc 24 <path_to_dicom_files> -m "(x_A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)"
 ```
-where `ctr_slc` is the DBT plane in focus with numbering starting from zero, `(x_A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)` are the CDMAM 4.0 grid outer rectangle corner coordinates in pixels as shown in the diagram below.
+where `ctr_slc` is the DBT plane in focus with numbering starting from zero, `(x_A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)` are the CDMAM 4.0 grid outer rectangle corner coordinates in pixels as highlighted (red dots) in the diagram below.
 
 <img src="images/cdmam_corner_markings.png" alt="Alt Text" style="width:45%;">
 
