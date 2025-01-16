@@ -47,7 +47,7 @@ The output data above can be visualized and saved on disk by executing:
 ```bash
 python3 plot_pc_vs_nroi.py -f <cv_results_file.txt> -o <output_png_filename>
 ```
-DBT device performance (4-AFC PC score with SEM as error bars) as a
+DBT device performance (4-AFC PC score with SEM error bars) as a
 function of number of images used in cross-validation will be
 summarized as shown in the graph below.
 <img src="images/results_plot.png" alt="Alt Text" style="width:70%;">
