@@ -15,7 +15,13 @@ If the CDMAM position was accidently altered between scans the user has an optio
 ```bash
 python3 extract_cdmam_rois.py -ctr_slc 24 <path_to_dicom_files> -a
 ```
-We recommend to always visually inspect extracted ROI crops in ImageJ by loading all `roi_*.png` files into ImageJ `File -> ImageSequence` stack before proceeding with cross-validation. Good quality patches may have some CDMAM 4.0 cell-separating lines visible at the squares borders, but no more than a few (2-4) pixels deep into an ROI. No symbols or characters in the CDMAM should be present in the ROIs. Square ROIs have two zero-valued lines drawn by the software to separate them into four qudrants. The central CDMAM detail (signal) should be approximately at the intersection of these lines, while the eccentrtic detail should be in one of the four quadrants. Note that due to presence of the non-uniform background some lower contrast details may be hard to see.
+We recommend to always visually inspect extracted ROI crops in ImageJ by loading all `roi_*.png` files into ImageJ `File -> ImageSequence` stack before proceeding with cross-validation. Good quality patches may have some CDMAM 4.0 cell-separating lines visible at the squares borders, but no more than a few (2-4) pixels deep into an ROI. No symbols or characters in the CDMAM should be present in the ROIs. Square ROIs have two zero-valued lines drawn by the software to separate them into four qudrants. The central CDMAM detail (signal) should be approximately at the intersection of these lines, while the eccentrtic detail should be in one of the four quadrants. Note that due to presence of the non-uniform background some lower contrast details may be hard to see. Examples of acceptable and unacceptable ROI crops are shown below
+
+Good ROIs for cross-validation:
+<img src="images/good_rois.png" alt="Alt Text" style="width:75%;">
+
+Bad ROIs that should not be used for cross-validation:
+<img src="images/bad_rois.png" alt="Alt Text" style="width:75%;">
 
 # Fine-tuning and cross validation with new data
 Imaging performance evaluation is done by performing 10-fold cross-validation runs on a new data. To start cross-validation script use:
