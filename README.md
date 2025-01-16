@@ -8,7 +8,7 @@ python3 extract_cdmam_rois.py -ctr_slc 24 <path_to_dicom_files> -m "(x_A, y_A, x
 ```
 where `ctr_slc` is the DBT plane in focus with numbering starting from zero, `(x_A, y_A, x_B, y_B, x_C, y_C, x_D, y_D)` are the CDMAM 4.0 grid outer rectangle corner coordinates in pixels as shown in the diagram below.
 
-<img src="images/cdmam_corner_markings.png" alt="Alt Text" style="width:60%;">
+<img src="images/cdmam_corner_markings.png" alt="Alt Text" style="width:45%;">
 
 This method can be used if data collection (for given PMMA thickness ) was done with CDMAM phantom position *unchanged* between DBT scans. [Sample dataset](https://plaque.twinbrook.org/index.php/s/ssb8YS4NzC6LWMt) DICOM files for testing this mode can be used with `"(396, 493, 1713, 499, 388, 2345, 1705, 2352)"` set of corner coordinates.
 If the CDMAM position was accidently altered between scans the user has an option to either apply the script in manual mode, providing new (A, B, C, D) coordinates of the CDMAM grid corners for each scan when position was changed, or run the script in **automatic** mode, in which the computer vision (CV2) `SimpleBlobDetector` algorithm will need to be tuned to find the fiducial markers in the CDMAM image. This process is explained in the ROI extraction manual [PDF](https://plaque.twinbrook.org/index.php/s/ABCD). Note that in this mode the main script uses `detect_blobs.py` module which should be located in the same folder as `extract_cdmam_rois.py`. To run the ROI extraction script in **automatic** mode use:
@@ -55,7 +55,7 @@ DBT device performance (4-AFC PC score with SEM error bars) as a
 function of number of images used in cross-validation will be
 summarized as shown in the graph below.
 
-<img src="images/results_plot.png" alt="Alt Text" style="width:70%;">
+<img src="images/results_plot.png" alt="Alt Text" style="width:60%;">
 
 For FDA regulatory submissions we ask the vendors to conduct three such
 tests with varied thicknesses of added PMMA (20, 40 and 50 mm) simulating
