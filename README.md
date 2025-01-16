@@ -47,10 +47,11 @@ The output data above can be visualized and saved on disk by executing:
 ```bash
 python3 plot_pc_vs_nroi.py -f <cv_results_file.txt> -o <output_png_filename>
 ```
-DBT device performance (4-AFC PC scores with SEM error bars) will
-be summarized as shown in the graph below.
+DBT device performance (4-AFC PC score with SEM uncertaintys) as a
+function of number of images used in cross-validation will be
+summarized as shown in the graph below.
 <img src="images/results_plot.png" alt="Alt Text" style="width:70%;">
 
-For regulatory submissions we ask the companies to conduct three such
-tests with varied thicknesses of added PMMA (20, 40 and 50 mm) for both
-predicate and subject devices.
+For FDA regulatory submissions we ask the vendors to conduct three such
+tests with varied thicknesses of added PMMA (20, 40 and 50 mm) simulating
+different breast thickness for predicate and subject devices.
