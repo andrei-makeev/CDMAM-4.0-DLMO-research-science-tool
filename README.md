@@ -61,7 +61,7 @@ DBT device performance (4-AFC PC score with SEM error bars) as a
 function of number of images used in cross-validation will be
 summarized as shown in the graph below.
 
-<img src="images/results_plot.png" alt="Alt Text" style="width:75%;">
+<img src="images/results_plot.png" alt="Alt Text" style="width:85%;">
 
 For FDA regulatory submissions we ask the vendors to conduct three such
 tests with varied thicknesses of added PMMA (20, 40 and 50 mm) simulating
