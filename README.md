@@ -10,7 +10,7 @@ where `ctr_slc` is the DBT plane in focus with numbering starting from zero, `(x
 
 <img src="images/cdmam_corner_markings.png" alt="Alt Text" style="width:45%;">
 
-This method can be used if data collection (for given PMMA thickness ) was done with CDMAM phantom position *unchanged* between DBT scans. [Sample dataset](https://plaque.twinbrook.org/index.php/s/ssb8YS4NzC6LWMt) DICOM files for testing this mode can be used with `"(396, 493, 1713, 499, 388, 2345, 1705, 2352)"` set of corner coordinates.
+This method can be used if data collection (for given PMMA thickness ) was done with CDMAM phantom position *unchanged* between DBT scans. [Sample dataset](https://github.com/andrei-makeev/CDMAM-4.0-DLMO-regulatory-science-tool/releases/download/v1.0.0/) DICOM files for testing this mode can be used with `"(396, 493, 1713, 499, 388, 2345, 1705, 2352)"` set of corner coordinates.
 If the CDMAM position was accidently altered between scans the user has an option to either apply the script in manual mode, providing new (A, B, C, D) coordinates of the CDMAM grid corners for each scan when position was changed, or run the script in **automatic** mode, in which the computer vision (CV2) `SimpleBlobDetector` algorithm will need to be tuned to find the fiducial markers in the CDMAM image. This process is explained in the ROI extraction manual [PDF](https://plaque.twinbrook.org/index.php/s/ABCD). Note that in this mode the main script uses `detect_blobs.py` module which should be located in the same folder as `extract_cdmam_rois.py`. To run the ROI extraction script in **automatic** mode use:
 ```bash
 python3 extract_cdmam_rois.py -ctr_slc 24 <path_to_dicom_files> -a
