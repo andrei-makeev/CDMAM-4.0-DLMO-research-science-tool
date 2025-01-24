@@ -1,5 +1,3 @@
-##!/usr/bin/python3.10
-
 import argparse
 import numpy as np
 import os
@@ -11,17 +9,12 @@ from   datetime import datetime
 
 now= datetime.now()
 formatted_date_time= now.strftime('%Y-%m-%d_%H-%M-%S')
-f_res_name= f"cv_results_{formatted_date_time}_test_clr_added.txt"
+f_res_name= f"cv_results_{formatted_date_time}_test.txt"
 
 n_rmv= 200  # 688  # number of random images to remove from CV dataset
 n_inc= 200  # 500  # by how much to increment n_rmv in subsequent CV runs
 n_pts= 3    # number of data points to evaluate DL-model performance vs. #ROIs in CV
 n_avg= 4    # number of times to repeat CV for given #ROIs
-
-#----- paths to 'baseline' model and testing dataset
-
-#mname= '/home/makeev/ml/keras/cdmam_dlmo/modl/cdmam_fda+advamed-hlgc_60032_cyc_lr_no_frozen_layers.keras'
-#fpath= '/home/makeev/ml/keras/cdmam_dlmo/data/hologic/new_br3d/6cm_pmma_16_random_dicoms_test_autmtc_ex'
 
 def parse_arguments():
     
@@ -72,9 +65,6 @@ fpath= args.dpath  # path to test dataset
 # f_res.write('CV using '+str(N)+' ROIs\n')
 # f_res.close()
 
-# cmd= 'python3 test__cdmam_model_oct.py '+fpath+' a '+f_res_name+' '+mname
-# os.system(cmd)
-
 for i in range(n_avg):  # repeat n_avg times to smooth out effect of random draw
         
     if i== 0:
@@ -84,7 +74,7 @@ for i in range(n_avg):  # repeat n_avg times to smooth out effect of random draw
         f_res.write('CV using '+str(N)+' ROIs\n')
         f_res.close()
         
-    cmd= 'python3 test_cdmam_model.py '+fpath+' a '+f_res_name+' '+mname
+    cmd= 'python3 finetune_cdmam_model.py '+fpath+' a '+f_res_name+' '+mname
     os.system(cmd)
 
 #----- (2) run CV with less data n_avg times
@@ -104,7 +94,7 @@ for j in range(n_pts):  # repeat n_pts times, e.g. if full set had 1000 ROIs, cr
             f_res.write('CV using '+str(N)+' ROIs\n')
             f_res.close()
             
-        cmd= 'python3 test_cdmam_model.py '+fpath+' a '+f_res_name+' '+mname
+        cmd= 'python3 finetune_cdmam_model.py '+fpath+' a '+f_res_name+' '+mname
         os.system(cmd)
         
         #----- move ROIs back from 'temp' folder
