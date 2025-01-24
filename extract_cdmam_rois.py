@@ -1,3 +1,4 @@
+import os
 import glob
 import random
 import string
@@ -108,8 +109,9 @@ def my_function():
         dcm=  pydicom.dcmread(fname)
         img= dcm.pixel_array
         slc= img[ctr_slc, :, :]
-        
-        print(fname)  # , '    ', dcm_id)
+
+        fname_short= os.path.basename(fname)
+        print(fname_short)  # , '    ', dcm_id)
         
         #----- (1): use CV blob detection alg. to determine outer grid corner coordinates
         
