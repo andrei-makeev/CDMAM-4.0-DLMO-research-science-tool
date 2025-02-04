@@ -67,3 +67,10 @@ summarized as shown in the graph below.
 For FDA regulatory submissions we ask the vendors to conduct three such
 tests with varied thicknesses of added PMMA (20, 40 and 50 mm) simulating
 different breast thickness for predicate and subject devices.
+
+# Installation
+Requirements:
+
+* Keras 2.15.0/TensorFlow 2.15.0 `pip install tensorflow[and-cuda]==2.15.*`
+* Classification models Zoo `pip install image-classifiers==0.2.2`
+
